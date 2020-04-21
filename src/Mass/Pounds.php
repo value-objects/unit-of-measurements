@@ -7,27 +7,18 @@ namespace CodingMatters\UoM\Mass;
 use CodingMatters\UoM\Helpers\ToString;
 use CodingMatters\UoM\Helpers\WithUnit;
 use CodingMatters\UoM\Helpers\WithValue;
-use CodingMatters\UoM\Measurement;
 use CodingMatters\UoM\Symbol;
 
-final class Grams
+final class Pounds
 {
     use WithUnit;
     use WithValue;
     use ToString;
 
-    public function __construct(float $measure, string $symbol = Symbol::GRAMS)
+    public function __construct(float $measure, string $symbol = Symbol::POUNDS)
     {
         $this->measure = $measure;
         $this->symbol = $symbol;
-
-        return $this;
-    }
-
-    public function toKilo() : self
-    {
-        $this->measure /= Measurement::KILO;
-        $this->symbol = Symbol::KILOGRAMS;
 
         return $this;
     }

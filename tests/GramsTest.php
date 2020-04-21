@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 namespace CodingMatters\UoMTest;
 
-use CodingMatters\UoM\Mass;
+use CodingMatters\UoM\Weight;
+use CodingMatters\UoM\Symbol;
 use CodingMatters\UoMTest\Fixtures\GramsTestData;
 use PHPUnit\Framework\TestCase;
 
@@ -16,13 +17,14 @@ final class GramsTest extends TestCase
      * How to initialize mass in grams
      * @test
      */
-    public function initializeUnit() : void
+    public function initializeWeightInGrams() : void
     {
         $measurement = 1;
 
-        $grams = Mass::inGrams($measurement);
+        $weight = Weight::inGrams($measurement);
 
-        $this->assertEquals("{$measurement} g", $grams);
+        $this->assertEquals($measurement, $weight->value());
+        $this->assertEquals(Symbol::GRAMS, $weight->unit());
     }
 
     /**
@@ -33,7 +35,8 @@ final class GramsTest extends TestCase
      */
     public function convertToKilo(float $measurement, string $expected) : void
     {
-        $grams = Mass::inGrams($measurement);
-        $this->assertEquals($expected, $grams->toKilo());
+        $weight = Weight::inGrams($measurement);
+
+        $this->assertEquals($expected, $weight->toKilo());
     }
 }

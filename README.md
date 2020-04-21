@@ -7,16 +7,34 @@ composer require codingmatters/unit-of-measures
 ```
 
 ### Units for Mass
-#### Grams
-```php
-use CodingMatters\UoM\Mass;
 
-$grams = Mass::inGrams(1000); // will return string "1000 g"
+Using ```Weight::class```  in measuring the mass. Following are practical usage for the weight object.
+
+```php
+use CodingMatters\UoM\Weight;
+
+$weightInGrams = Weight::inGrams(1000);
+$weightInPounds = Weight::inPounds(250);
+$weightInOunce = Weight::inOunch(350);
+```
+
+#### Weight In Grams
+```php
+use CodingMatters\UoM\Weight;
+
+$weight = Weight::inGrams(1000); // will return string "1000 g"
+$weight->unit(); // will return g
+$weight->value(); // will return 1000
 
 /**
  * Available conversion method:
  */
-$grams->toKilo(); // will return string as "1 kg"
+$weightInKilos = $weight->toKilo(); // will return string as "1 kg"
+$weightInPounds = $weight->toPounds(); // will return string as ""
+
+// you can still use the unit() and value() methods after conversion
+$weightInKilos->unit(); // will return kg
+$weightInKilos->value(); // will return 1
 ```
 # Contributions
 Developed by [Gab Amba](https://github.com/gabbydgab) and maintained by [Coding Matters Software Development Services](https://codingmatters.today)
