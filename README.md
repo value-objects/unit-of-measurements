@@ -1,9 +1,16 @@
-# Unit of Measurements
-A library for Unit of Measurements
+# Unit of Measures in PHP
+A library for Unit of Measurements written in PHP.
+
+Installation:
+```php
+composer require codingmatters/unit-of-measures
+```
 
 ### Units for Mass
 #### Grams
 ```php
+use CodingMatters\UoM\Mass;
+
 $grams = Mass::inGrams(1000); // will return string "1000 g"
 
 /**
