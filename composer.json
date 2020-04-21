@@ -1,0 +1,43 @@
+{
+  "name": "codingmatters/unit-of-measures",
+  "description": "Unit of Measurements as Immutable Objects",
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Coding Matters ",
+      "email": "support@codingmatters.today"
+    }
+  ],
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "require": {
+    "php": "^7.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "CodingMatters\\UoM\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "CodingMatters\\UoMTest\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "malukenho/mcbumpface": "^1.1.2",
+    "phpunit/phpunit": "^9.1.2",
+    "sebastian/phpcpd": "^5.0.2",
+    "laminas/laminas-coding-standard": "^1.0.0"
+  },
+  "scripts": {
+    "check": [
+      "@cs-check",
+      "@check-cpd",
+      "@test"
+    ],
+    "cs-check": "phpcs",
+    "cs-fix": "phpcbf",
+    "check-cpd": "phpcpd --exclude=vendor,public,bootstrap,config --fuzzy src tests",
+    "test": "phpunit --testdox --colors=always"
+  }
+}
