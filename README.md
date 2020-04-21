@@ -12,7 +12,7 @@ $grams = Mass::inGrams(1000); // will return string "1000 g"
 $grams->toKilo(); // will return string as "1 kg"
 ```
 # Contributions
-Developed by [Gab Amba](https://github.com/gabbydgab) and maintained by [Coding Matters Software Development Services]("https://codingmatters.today")
+Developed by [Gab Amba](https://github.com/gabbydgab) and maintained by [Coding Matters Software Development Services](https://codingmatters.today)
 
 We thank all the [contributors](https://github.com/CodingMatters/community-crisis-response-and-monitoring-system/graphs/contributors) who made this project possible.
 
