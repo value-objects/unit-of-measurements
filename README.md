@@ -1,5 +1,5 @@
 # Unit of Measures
-A library for Unit of Measurements as Immutable Objects
+A library for Unit of Measurements
 
 ### Units for Mass
 #### Grams
@@ -9,7 +9,6 @@ Available conversion method:
 
 $grams->toKilo(); // will return string as "1 kg"
 
-### Units for Length
 
 # Contributions
 Developed by [Gab Amba](https://github.com/gabbydgab) and maintained by [Coding Matters Software Development Services]("https://codingmatters.today")
