@@ -1,15 +1,16 @@
-# Unit of Measures
+# Unit of Measurements
 A library for Unit of Measurements
 
 ### Units for Mass
 #### Grams
+```php
 $grams = Mass::inGrams(1000); // will return string "1000 g"
 
-Available conversion method:
-
+/**
+ * Available conversion method:
+ */
 $grams->toKilo(); // will return string as "1 kg"
-
-
+```
 # Contributions
 Developed by [Gab Amba](https://github.com/gabbydgab) and maintained by [Coding Matters Software Development Services]("https://codingmatters.today")
 
